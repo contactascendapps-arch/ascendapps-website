@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ascendapps | Done-for-you apps, websites and AI receptionists</title>
+<meta name="description" content="Ascendapps Limited, official Able2 partner NZ. We build and look after apps, websites and AI receptionists for Kiwi businesses, branded as yours and done for you.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira:wght@700;800&display=swap" rel="stylesheet">
+<script>window.SH_CONFIG = { site: "able2nz" };</script>
+<script src="https://simple-host.app/auth.js"></script>
+<style>
+:root { --bg:#05040B; --bg2:#0B0916; --card:#12101F; --line:#26223D; --text:#F2F0FA; --muted:#A8A3C2; --mag:#D825FC; --vio:#8170EE; --blue:#58BDF9; --cyan:#1CD9E0; --grad:linear-gradient(90deg,#D825FC 0%,#8170EE 50%,#1CD9E0 100%); --btn:linear-gradient(90deg,#B81FE0 0%,#6E5BE8 100%); --r:16px; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:"Inter",system-ui,sans-serif; font-size:17px; line-height:1.6; color:var(--text); background:var(--bg); }
+a { color:var(--cyan); }
+.wrap { max-width:1140px; margin:0 auto; padding:0 20px; }
+h1,h2,h3,.k,.saira { font-family:"Saira","Inter",sans-serif; }
+.g { background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.k { display:inline-block; font-weight:700; font-size:14px; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan); margin-bottom:12px; }
+h2 { font-weight:800; font-size:clamp(30px,4.2vw,46px); line-height:1.08; margin:0 0 14px; }
+.lead { color:var(--muted); font-size:18px; max-width:680px; margin:0 0 34px; }
+section { padding:84px 0; }
+section.alt { background:var(--bg2); }
+.btn { display:inline-block; background:var(--btn); color:#fff; font-weight:700; text-decoration:none; padding:15px 28px; border-radius:999px; border:0; font:inherit; font-weight:700; cursor:pointer; box-shadow:0 0 24px rgba(129,112,238,.35); }
+.btn.ghost { background:transparent; border:1px solid var(--line); box-shadow:none; color:var(--text); }
+.top { position:sticky; top:0; z-index:20; background:rgba(5,4,11,.86); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+.top .wrap { display:flex; align-items:center; justify-content:space-between; gap:16px; height:68px; }
+.brand { display:flex; align-items:center; gap:4px; text-decoration:none; }
+.brand img { width:46px; height:42px; }
+.brand b { font-family:"Saira","Inter",sans-serif; font-weight:800; font-size:26px; letter-spacing:2px; }
+nav.links { display:flex; gap:22px; }
+nav.links a { color:var(--muted); text-decoration:none; font-size:15px; font-weight:600; }
+nav.links a:hover { color:var(--text); }
+.top .btn { padding:10px 18px; font-size:15px; }
+.hero { position:relative; overflow:hidden; padding:90px 0 100px; }
+.hero::before { content:""; position:absolute; left:-220px; bottom:-260px; width:640px; height:640px; border-radius:50%; background:radial-gradient(closest-side,rgba(216,37,252,.28),transparent); }
+.hero::after { content:""; position:absolute; right:-200px; top:-200px; width:640px; height:640px; border-radius:50%; background:radial-gradient(closest-side,rgba(28,217,224,.22),transparent); }
+.hero .wrap { position:relative; z-index:1; display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center; }
+.hero h1 { font-weight:800; font-size:clamp(40px,6vw,72px); line-height:1.02; margin:0 0 20px; }
+.hero p { color:var(--muted); font-size:clamp(18px,2vw,21px); margin:0 0 30px; max-width:600px; }
+.ctas { display:flex; gap:12px; flex-wrap:wrap; }
+.offer { display:flex; flex-direction:column; gap:12px; }
+.offer a { display:flex; gap:16px; align-items:center; background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:18px 20px; text-decoration:none; color:var(--text); }
+.offer a:hover { border-color:var(--vio); }
+.offer i { width:44px; height:44px; border-radius:12px; background:var(--grad); color:#05040B; display:flex; align-items:center; justify-content:center; font-style:normal; font-weight:800; font-family:"Saira","Inter",sans-serif; flex:0 0 auto; }
+.offer b { display:block; font-size:18px; }
+.offer span { color:var(--muted); font-size:14px; }
+.steps { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; counter-reset:s; }
+.steps div { background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:26px; }
+.steps div::before { counter-increment:s; content:counter(s); display:inline-flex; width:40px; height:40px; border-radius:50%; background:var(--grad); color:#05040B; font-weight:800; font-family:"Saira","Inter",sans-serif; align-items:center; justify-content:center; margin-bottom:14px; }
+.steps b { display:block; font-size:19px; margin-bottom:6px; }
+.steps p { margin:0; color:var(--muted); }
+.compare { margin-top:22px; display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+.compare div { border-radius:var(--r); padding:22px 24px; border:1px solid var(--line); }
+.compare .us { border-color:var(--vio); background:var(--card); box-shadow:0 0 40px rgba(129,112,238,.15); }
+.compare b { display:block; font-family:"Saira","Inter",sans-serif; font-size:22px; margin-bottom:4px; }
+.compare p { margin:0; color:var(--muted); }
+.assist { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+.call { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:22px; }
+.call .who { display:flex; justify-content:space-between; font-size:14px; color:var(--muted); margin-bottom:12px; }
+.bubble { border-radius:14px; padding:10px 14px; margin:8px 0; max-width:88%; font-size:15px; }
+.bubble.c { background:#1B1830; }
+.bubble.a { background:linear-gradient(90deg,rgba(184,31,224,.25),rgba(110,91,232,.25)); margin-left:auto; }
+.booked { margin-top:12px; border:1px dashed var(--cyan); border-radius:12px; padding:10px 14px; font-size:14px; color:var(--cyan); font-weight:600; }
+ul.ticks { list-style:none; padding:0; margin:0 0 26px; display:grid; gap:10px; }
+ul.ticks li { display:flex; gap:12px; }
+ul.ticks li::before { content:"\2713"; flex:0 0 26px; height:26px; border-radius:50%; background:var(--grad); color:#05040B; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:14px; }
+.pills { display:flex; gap:10px; flex-wrap:wrap; }
+.pills a { border:1px solid var(--line); border-radius:999px; padding:8px 16px; text-decoration:none; color:var(--text); font-weight:600; font-size:15px; }
+.pills a:hover { border-color:var(--cyan); }
+.phones { display:flex; gap:26px; justify-content:center; flex-wrap:wrap; margin:10px 0 50px; }
+.phone { width:250px; height:510px; border-radius:38px; background:#000; padding:9px; box-shadow:0 30px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.07),0 0 60px rgba(129,112,238,.18); }
+.scr { width:100%; height:100%; border-radius:30px; background:#0E0C1A; overflow:hidden; display:flex; flex-direction:column; font-size:12.5px; position:relative; }
+.notch { position:absolute; top:7px; left:50%; transform:translateX(-50%); width:80px; height:22px; border-radius:12px; background:#000; }
+.sb { height:36px; display:flex; justify-content:space-between; align-items:flex-end; padding:0 20px 3px; font-size:10.5px; font-weight:600; color:var(--muted); }
+.st { padding:10px 16px 8px; font-weight:700; font-size:15px; }
+.sbody { padding:0 14px 14px; display:flex; flex-direction:column; gap:9px; }
+.days { display:grid; grid-template-columns:repeat(5,1fr); gap:5px; text-align:center; font-size:10px; color:var(--muted); }
+.days span { padding:6px 0; border-radius:10px; background:#17142A; }
+.days span.on { background:var(--btn); color:#fff; font-weight:700; }
+.slots { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.slots span { border:1px solid var(--line); border-radius:10px; padding:7px; text-align:center; }
+.slots span.on { border-color:var(--cyan); color:var(--cyan); font-weight:700; }
+.svc { background:#17142A; border-radius:12px; padding:10px; }
+.svc b { display:block; }
+.svc span { color:var(--muted); font-size:11px; }
+.sbtn { background:var(--btn); border-radius:10px; padding:10px; text-align:center; font-weight:700; color:#fff; }
+.qline { display:flex; justify-content:space-between; padding:6px 0; border-bottom:1px solid var(--line); }
+.qline.tot { font-weight:800; border:0; font-size:14px; }
+.chk { display:flex; gap:8px; align-items:center; padding:6px 0; }
+.chk i { width:16px; height:16px; border-radius:5px; border:2px solid var(--line); flex:0 0 auto; }
+.chk i.on { background:var(--cyan); border-color:var(--cyan); }
+.prof { display:flex; gap:10px; align-items:center; }
+.av { width:40px; height:40px; border-radius:50%; background:var(--grad); color:#05040B; display:flex; align-items:center; justify-content:center; font-weight:800; }
+.hist { border-left:2px solid var(--vio); padding:2px 0 2px 10px; }
+.hist b { display:block; font-size:12px; }
+.hist span { color:var(--muted); font-size:11px; }
+.cap { text-align:center; margin-top:12px; font-weight:700; }
+.cap span { display:block; font-weight:400; color:var(--muted); font-size:14px; }
+.feat { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+.feat div { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; }
+.feat b { display:block; margin-bottom:4px; }
+.feat span { color:var(--muted); font-size:14px; }
+.ind { margin-top:34px; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.ind b { margin-right:6px; }
+.ind span { background:#17142A; border-radius:999px; padding:7px 14px; font-size:14px; font-weight:600; }
+.web { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+.browser { border-radius:14px; border:1px solid var(--line); overflow:hidden; background:var(--card); }
+.browser .barx { display:flex; gap:6px; padding:10px 12px; background:#17142A; }
+.browser .barx i { width:10px; height:10px; border-radius:50%; background:#2D2847; }
+.bw { padding:22px; }
+.bw .hd { height:12px; width:60%; border-radius:6px; background:var(--grad); margin-bottom:12px; }
+.bw .ln { height:8px; border-radius:4px; background:#26223D; margin:8px 0; }
+.bw .row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; margin-top:16px; }
+.bw .row div { height:60px; border-radius:10px; background:#1B1830; }
+.bw .cta { display:inline-block; margin-top:16px; padding:8px 16px; border-radius:999px; background:var(--btn); font-size:13px; font-weight:700; }
+.proj { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:var(--r); padding:24px; display:flex; flex-direction:column; gap:10px; }
+.tag { align-self:flex-start; font-size:12px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:4px 10px; border-radius:999px; }
+.tag.live { background:rgba(28,217,224,.15); color:var(--cyan); }
+.tag.concept { background:rgba(216,37,252,.15); color:#E9A6FF; }
+.card h3 { margin:0; font-size:22px; }
+.card p { margin:0; color:var(--muted); font-size:15px; }
+.card a.more { margin-top:auto; font-weight:700; text-decoration:none; }
+.note { color:var(--muted); font-size:14px; margin-top:16px; }
+.book .wrap { display:grid; grid-template-columns:1fr 1.1fr; gap:40px; align-items:start; }
+.book p { color:var(--muted); }
+form.demo { background:var(--card); border:1px solid var(--vio); border-radius:var(--r); padding:26px; box-shadow:0 0 40px rgba(216,37,252,.15); }
+form.demo label { display:block; font-weight:600; font-size:15px; margin-bottom:14px; }
+form.demo input { display:block; width:100%; margin-top:6px; font:inherit; padding:11px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--text); }
+form.demo input:focus { outline:2px solid var(--cyan); border-color:var(--cyan); }
+form.demo .two { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+form.demo .btn { width:100%; }
+form.demo .fine { font-size:13px; color:var(--muted); margin:12px 0 0; }
+#status { display:block; margin-top:12px; font-weight:600; }
+#status.ok { color:var(--cyan); }
+#status.err { color:#FF6B8B; }
+footer { border-top:1px solid var(--line); padding:30px 0; color:var(--muted); font-size:14px; }
+footer .wrap { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+footer a { color:var(--text); }
+@media (max-width:900px) {
+  nav.links { display:none; }
+  .hero .wrap, .assist, .web, .book .wrap, .compare { grid-template-columns:1fr; }
+  .steps, .proj { grid-template-columns:1fr; }
+  .feat { grid-template-columns:1fr 1fr; }
+  section { padding:60px 0; }
+  .hero { padding:56px 0 64px; }
+}
+@media (max-width:520px) { .feat { grid-template-columns:1fr; } form.demo .two { grid-template-columns:1fr; } .top .btn { display:none; } }
+.brand.wm{display:flex;flex-direction:column;align-items:flex-start;gap:0;line-height:1;text-decoration:none}.brand.wm b{font-family:"Saira","Inter",sans-serif;font-weight:800;font-size:26px;letter-spacing:.5px;color:#F2F0FA}.brand.wm small{font-family:"Inter",sans-serif;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1CD9E0;margin-top:5px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand wm" href="./"><b>Ascendapps</b><small>Official Able2 partner NZ</small></a>
+    <nav class="links"><a href="#done">Done for you</a><a href="#assist">AI receptionist</a><a href="#app">The app</a><a href="#plans">App plans</a><a href="#websites">Websites</a><a href="#projects">Projects</a></nav>
+    <a class="btn" href="#book">Book a free demo</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="k">Ascendapps Limited, official Able2 partner NZ</span>
+      <h1>Your app, website and receptionist. <span class="g">Done for you.</span></h1>
+      <p>We build and look after everything, branded as yours: an app your clients actually use, a website that brings in work, and an AI receptionist that never misses a call. You keep running your business.</p>
+      <div class="ctas"><a class="btn" href="#book">Book a free demo</a><a class="btn ghost" href="#projects">See our projects</a></div>
+    </div>
+    <div class="offer">
+      <a href="#done"><i>1</i><div><b>Done for you</b><span>We set it up, brand it and look after it</span></div></a>
+      <a href="#assist"><i>2</i><div><b>AI receptionist</b><span>Answers your phone 24/7, books and takes payments</span></div></a>
+      <a href="#app"><i>3</i><div><b>Your own app</b><span>Bookings, payments, quotes and clients in one place</span></div></a>
+      <a href="#websites"><i>4</i><div><b>Websites</b><span>A fresh site that works as hard as you do</span></div></a>
+    </div>
+  </div>
+</div>
+
+<section class="alt" id="done">
+  <div class="wrap">
+    <span class="k">Done for you</span>
+    <h2>You don't build anything. <span class="g">We do.</span></h2>
+    <p class="lead">Plenty of tools let you build your own app if you have the time. Most business owners don't. We do the whole thing for you, then stay on hand as your local team.</p>
+    <div class="steps">
+      <div><b>A free demo, within a day</b><p>Send us your business name, logo and how you take bookings and payments now. We send back a demo with your business on it.</p></div>
+      <div><b>We build and brand it</b><p>Your name, colours and services, set up the way you work. Published on Google Play and the App Store.</p></div>
+      <div><b>We look after it</b><p>Changes, updates and support from a Kiwi team you can actually talk to.</p></div>
+    </div>
+    <div class="compare">
+      <div><b>Built from scratch</b><p>A custom app usually costs US$25,000 to US$75,000 and takes 3 to 9 months, plus often US$10,000 or more to get it into the app stores.</p></div>
+      <div class="us"><b class="g">Built on Able2</b><p>Around 90% of what businesses need is already built and tested, so we don't start from scratch. You get the same functionality for far less, faster.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="assist">
+  <div class="wrap assist">
+    <div>
+      <span class="k">Able2 Assist, AI receptionist</span>
+      <h2>Your hands are full. <span class="g">Your phone is covered.</span></h2>
+      <p class="lead" style="margin-bottom:22px">Restaurants mid-service, salons with every chair full, farriers under a horse, a medical centre with five staff and the phone still ringing out. When nobody can get to the phone, Able2 Assist answers. It takes care of everything.</p>
+      <ul class="ticks">
+        <li>Answers 24/7 on your own number</li>
+        <li>Books the job, takes quotes and payments on the call</li>
+        <li>Tells you who called, what they wanted and what they booked, with a transcript</li>
+        <li>Adds every caller to your client list</li>
+      </ul>
+      <p style="margin:0 0 18px;color:var(--text)"><b>From NZ$449 a month</b> after a one-off NZ$1,200 setup. Three plans by monthly minutes: Business Lite NZ$449 (300 minutes), Business NZ$649 (500 minutes) and Business Max NZ$1,199 (1,200 minutes). Minimum 6 month term.</p>
+      <div class="pills"><a href="#calculator">What missed calls cost you</a><a href="assist/">See how it works</a><a href="mechanics/">For mechanics</a><a href="restaurants/">For restaurants</a></div>
+    </div>
+    <div class="call">
+      <div class="who"><span>Incoming call, 10:15 am</span><span>Able2 Assist</span></div>
+      <div class="bubble c">Hi, my mare's thrown a shoe. Can someone come out this week?</div>
+      <div class="bubble a">Yes. There's Thursday at 2 pm or Friday at 9 am free in your area. Which suits you?</div>
+      <div class="bubble c">Thursday's good. We're on Kaipara Coast Road.</div>
+      <div class="bubble a">Done. Thursday at 2 pm on Kaipara Coast Road for a reshoe. I'll email you a link for the call-out deposit now.</div>
+      <div class="booked">Booked: Thu 2 pm, reshoe, deposit sent. Owner notified.</div>
+    </div>
+  </div>
+</section>
+
+<section id="calculator" style="padding-top:0">
+  <div class="wrap">
+    <span class="k">Missed call calculator</span>
+    <h2>What are unanswered calls <span class="g">costing you?</span></h2>
+    <p class="lead">Move the sliders to match your business. Even a cautious guess usually tells the story.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px">
+      <div style="background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:28px">
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><label for="hc-missed" style="font-weight:700">Calls you miss each week</label><span id="hc-missed-out" class="saira" style="font-weight:800;font-size:28px;color:var(--cyan)">8</span></div><input id="hc-missed" type="range" min="1" max="60" step="1" value="8" style="width:100%;height:32px;accent-color:#1CD9E0;cursor:pointer"><span style="color:var(--muted);font-size:14px">Calls that ring out or go to voicemail while you're busy, after hours or at the weekend.</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><label for="hc-value" style="font-weight:700">Average value of a job</label><span id="hc-value-out" class="saira" style="font-weight:800;font-size:28px;color:var(--cyan)">NZ$250</span></div><input id="hc-value" type="range" min="25" max="2000" step="25" value="250" style="width:100%;height:32px;accent-color:#1CD9E0;cursor:pointer"><span style="color:var(--muted);font-size:14px">What a typical customer spends with you each time.</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><label for="hc-share" style="font-weight:700">Missed callers who'd have booked</label><span id="hc-share-out" class="saira" style="font-weight:800;font-size:28px;color:var(--cyan)">30%</span></div><input id="hc-share" type="range" min="5" max="80" step="5" value="30" style="width:100%;height:32px;accent-color:#1CD9E0;cursor:pointer"><span style="color:var(--muted);font-size:14px">Not every caller is a sale. Pick the share you'd realistically have won.</span></div>
+      </div>
+      <div style="background:linear-gradient(150deg,#250931 0%,#12101F 55%,#0A2A30 100%);border:1px solid var(--vio);border-radius:var(--r);padding:28px;display:flex;flex-direction:column;gap:18px;box-shadow:0 0 40px rgba(129,112,238,.15)">
+        <div><span style="color:var(--muted);font-size:15px">You could be losing about</span><div id="hc-month" class="g saira" style="font-weight:800;font-size:54px;line-height:1.05">NZ$0</div><span style="color:var(--muted)">a month, or <strong id="hc-year" style="color:var(--text)">NZ$0</strong> a year</span></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:16px;border-top:1px solid var(--line);font-size:16px">
+          <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:var(--muted)">Jobs slipping away each month</span><strong id="hc-jobs">0</strong></div>
+          <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:var(--muted)">Your receptionist each month, from</span><strong>NZ$449</strong></div>
+          <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:var(--muted)">Bookings a month to cover it</span><strong id="hc-break">0</strong></div>
+          <div style="display:flex;justify-content:space-between;gap:12px"><span style="color:var(--muted)">First year, NZ$1,200 setup included</span><strong id="hc-yearcost">NZ$0</strong></div>
+        </div>
+        <div id="hc-verdict" style="border:1px solid var(--cyan);border-radius:12px;padding:14px 16px;background:rgba(5,4,11,.6)"></div>
+        <a class="btn" href="#book" style="text-align:center">Stop losing those calls</a>
+        <span style="color:var(--muted);font-size:13px">An estimate from the numbers you chose, based on 4.33 weeks a month. Receptionist prices are in NZ dollars, with a minimum 6 month term. Not a guarantee of results.</span>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+(function(){
+  var SETUP=1200, MONTHLY=449;
+  var money=function(n){return 'NZ$'+Math.round(n).toLocaleString('en-NZ');};
+  var $=function(id){return document.getElementById(id);};
+  var m=$('hc-missed'), v=$('hc-value'), s=$('hc-share');
+  if(!m) return;
+  function upd(){
+    var jobs=(+m.value)*4.33*((+s.value)/100), lostM=jobs*(+v.value), lostY=lostM*12, cost=SETUP+MONTHLY*12, be=(+v.value)>0?Math.ceil(MONTHLY/(+v.value)):0;
+    $('hc-missed-out').textContent=m.value; $('hc-value-out').textContent=money(+v.value); $('hc-share-out').textContent=s.value+'%';
+    $('hc-month').textContent=money(lostM); $('hc-year').textContent=money(lostY); $('hc-jobs').textContent=Math.round(jobs*10)/10; $('hc-break').textContent=be; $('hc-yearcost').textContent=money(cost);
+    $('hc-verdict').textContent= lostY>cost ? 'Even after setup, that is about '+money(lostY-cost)+' more in your pocket in the first year, if your receptionist wins back those calls.' : 'Win back just '+be+(be===1?' booking':' bookings')+' a month and your receptionist covers its monthly cost.';
+  }
+  [m,v,s].forEach(function(el){el.addEventListener('input',upd);});
+  upd();
+})();
+</script>
+
+<section class="alt" id="app">
+  <div class="wrap">
+    <span class="k">Your own app</span>
+    <h2>Your business, in your <span class="g">clients' pocket</span></h2>
+    <p class="lead">One app with your name on it, for your clients and your team. Customers book and pay without downloading anything, and your team sees every booking, client and job in one place.</p>
+    <div class="phones">
+      <div>
+        <div class="phone"><div class="scr"><div class="notch"></div><div class="sb"><span>9:41</span><span>5G</span></div>
+          <div class="st">Book a service</div>
+          <div class="sbody">
+            <div class="svc"><b>Full service and WOF</b><span>2 hours &middot; from $289</span></div>
+            <div class="days"><span>Mon</span><span>Tue</span><span class="on">Wed</span><span>Thu</span><span>Fri</span></div>
+            <div class="slots"><span>8:00 am</span><span class="on">9:30 am</span><span>11:00 am</span><span>1:30 pm</span><span>3:00 pm</span><span>4:30 pm</span></div>
+            <div class="sbtn">Book and pay deposit</div>
+          </div>
+        </div></div>
+        <div class="cap">Online bookings<span>Any hour, paid upfront</span></div>
+      </div>
+      <div>
+        <div class="phone"><div class="scr"><div class="notch"></div><div class="sb"><span>11:05</span><span>5G</span></div>
+          <div class="st">Quote #1042</div>
+          <div class="sbody">
+            <div class="qline"><span>Front brake pads</span><span>$180</span></div>
+            <div class="qline"><span>Brake fluid flush</span><span>$95</span></div>
+            <div class="chk"><i class="on"></i><span>Wiper blades (optional) $45</span></div>
+            <div class="chk"><i></i><span>Cabin filter (optional) $60</span></div>
+            <div class="qline tot"><span>Total</span><span>$320</span></div>
+            <div class="sbtn">Approve and pay</div>
+          </div>
+        </div></div>
+        <div class="cap">Quotes and payments<span>Approved and paid on their phone</span></div>
+      </div>
+      <div>
+        <div class="phone"><div class="scr"><div class="notch"></div><div class="sb"><span>2:18</span><span>5G</span></div>
+          <div class="st">Client</div>
+          <div class="sbody">
+            <div class="prof"><span class="av">SM</span><div><b>Sarah Mitchell</b><br><span style="color:var(--muted);font-size:11px">Client since 2024 &middot; 14 visits</span></div></div>
+            <div class="hist"><b>Colour and cut</b><span>12 Oct &middot; Toner 9V, 35 min</span></div>
+            <div class="hist"><b>Treatment</b><span>3 Aug &middot; Prefers Saturday mornings</span></div>
+            <div class="hist"><b>Note</b><span>Allergic to PPD patch test, see file</span></div>
+            <div class="sbtn">Book next visit</div>
+          </div>
+        </div></div>
+        <div class="cap">Client records<span>Every visit and note, for the whole team</span></div>
+      </div>
+    </div>
+    <div class="feat">
+      <div><b>Bookings</b><span>Online booking pages with deposits</span></div>
+      <div><b>Payments</b><span>By link or QR code, into your own account</span></div>
+      <div><b>Quotes and invoices</b><span>Approved and paid from a phone</span></div>
+      <div><b>Client records</b><span>History and notes in one place</span></div>
+      <div><b>Team chat</b><span>Instead of group texts</span></div>
+      <div><b>Checklists and forms</b><span>Filled in on a phone, kept on file</span></div>
+      <div><b>Memberships</b><span>Recurring clients and passes</span></div>
+      <div><b>Events and tickets</b><span>Sell and scan tickets</span></div>
+      <div><b>Shop</b><span>Sell products alongside services</span></div>
+      <div><b>Courses</b><span>Teach and share content</span></div>
+      <div><b>News and notifications</b><span>Reach clients on their phones</span></div>
+      <div><b>Your branding</b><span>On Google Play and the App Store</span></div>
+    </div>
+    <div class="ind"><b>Built for</b><span>Horse trainers and racing stables</span><span>Mechanics</span><span>Salons and barbers</span><span>Restaurants</span><span>Coaches</span><span>Trades</span><span>Events</span><span>Superyachts</span><span>Clubs and community groups</span></div>
+  </div>
+</section>
+
+<section id="plans">
+  <div class="wrap">
+    <span class="k">App plans</span>
+    <h2>Two ways to get <span class="g">your own app</span></h2>
+    <p class="lead">Your own branded app for your business, or a community app for your club or group. We set up both for you, so you never start from a blank screen. App prices are in US dollars.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+      <div class="card" style="border-color:var(--vio);box-shadow:0 0 40px rgba(129,112,238,.15)">
+        <span class="tag live">Done for you</span>
+        <h3>Your own branded app</h3>
+        <p style="color:var(--text);font-family:'Saira','Inter',sans-serif;font-size:30px;font-weight:800;line-height:1.1;margin:4px 0 0">US$12,000 <span style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;color:var(--muted)">to build and launch</span></p>
+        <p style="color:var(--text);font-weight:700">then US$1,000 a month</p>
+        <ul class="ticks" style="margin:8px 0 18px">
+          <li>Your own listing on Google Play and the App Store, under your business name</li>
+          <li>Built, branded and set up around how you work, live in 2 weeks once we have your content</li>
+          <li>Changes, updates and hosting included in your monthly fee</li>
+          <li>A 3-hour response, 7am to 5pm, Monday to Friday</li>
+        </ul>
+        <a class="btn" href="#book" style="margin-top:auto;text-align:center">Book a free demo</a>
+      </div>
+      <div class="card">
+        <span class="tag concept">Community</span>
+        <h3>An app for your community</h3>
+        <p style="color:var(--text);font-family:'Saira','Inter',sans-serif;font-size:30px;font-weight:800;line-height:1.1;margin:4px 0 0">US$499 <span style="font-family:'Inter',sans-serif;font-size:16px;font-weight:600;color:var(--muted)">setup</span></p>
+        <p style="color:var(--text);font-weight:700">then US$89 or US$149 a month</p>
+        <p>For churches, surf clubs, sports teams, RDA groups, clubs and charities. One place for your members to get news and game-day changes, RSVP to events, talk in their own groups and pay subs or fees. We set it up for you, then your team or committee runs it day to day.</p>
+        <p style="color:var(--text)"><b>You don't build anything.</b> We set everything up, bring your members, events and forms in, make changes when you need them and stay on hand as your volunteers and committee change.</p>
+        <p style="color:var(--text);background:#17142A;border-radius:12px;padding:12px 14px;font-size:14px">For a club of 100 members, that's about US$16 a member in the first year, then about US$11 a member a year after that.</p>
+        <ul class="ticks" style="margin:8px 0 18px">
+          <li><span><b>Community, US$89 a month:</b> up to 5 admins, 5 group forums, 10 events at a time, 3 forms and 2 GB of storage</span></li>
+          <li><span><b>Community Plus, US$149 a month:</b> unlimited admins, events and storage, 20 group forums, 20 forms and help from the support team</span></li>
+          <li>Unlimited members on both, with event sign-ups and payments for subs, fees and tickets</li>
+          <li>Members join with an invite link or QR code and use it in the Able2 app on iPhone and Android, under your club's name and logo</li>
+        </ul>
+        <a class="btn ghost" href="#book" style="margin-top:auto;text-align:center">Ask about a community app</a>
+      </div>
+    </div>
+    <div style="margin-top:18px;border:1px dashed var(--line);border-radius:var(--r);padding:20px 22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px 24px;align-items:start">
+      <div><span class="k" style="margin-bottom:4px;color:var(--muted)">What a developer usually charges</span><p style="margin:0;color:var(--muted);font-size:14px">Typical 2026 ranges for a small business app built from scratch, in US dollars.</p></div>
+      <div><b style="display:block;font-size:20px" class="saira">US$25,000 to US$75,000</b><span style="color:var(--muted);font-size:14px">to build, plus often US$10,000 or more to launch on the app stores</span></div>
+      <div><b style="display:block;font-size:20px" class="saira">US$1,000 to US$2,000 a month</b><span style="color:var(--muted);font-size:14px">to look after it, with changes billed by the hour</span></div>
+      <div><b style="display:block;font-size:20px" class="saira">3 to 9 months</b><span style="color:var(--muted);font-size:14px">before it's live. With us, about 2 weeks once we have your content</span></div>
+    </div>
+    <p class="note">Payments taken through your app carry a 2% platform fee. Want your own listing on Google Play and the App Store later? We can move your club or group up to its own branded app, and the app store setup is part of that price.</p>
+  </div>
+</section>
+
+<section id="websites">
+  <div class="wrap web">
+    <div>
+      <span class="k">Websites</span>
+      <h2>Does your website look <span class="g">a bit 2009?</span></h2>
+      <p class="lead" style="margin-bottom:22px">Customers decide in seconds. We give your site a fresh, modern look that works on every phone, then add the features that bring in work.</p>
+      <ul class="ticks">
+        <li>A clean design that looks right on any phone</li>
+        <li>Online bookings and payments built in</li>
+        <li>An enquiry form that saves every lead</li>
+        <li>Linked to your app and your AI receptionist</li>
+      </ul>
+      <a class="btn" href="#book">Get a free concept of your new site</a>
+    </div>
+    <div class="browser"><div class="barx"><i></i><i></i><i></i></div><div class="bw"><div class="hd"></div><div class="ln" style="width:90%"></div><div class="ln" style="width:75%"></div><div class="row"><div></div><div></div><div></div></div><span class="cta">Book now</span></div></div>
+  </div>
+</section>
+
+<section class="alt" id="projects">
+  <div class="wrap">
+    <span class="k">Projects</span>
+    <h2>Work and <span class="g">concepts</span></h2>
+    <p class="lead">Concept demos that show what we can build for your industry.</p>
+    <div class="proj">
+      <div class="card"><span class="tag concept">Concept</span><h3>Mechanic workshop app</h3><p>A made-up workshop with every call answered, online bookings, quotes approved by phone, vehicle records, inspection checklists and payment before the keys go back.</p><a class="more" href="mechanics/">View the workshop app</a></div>
+      <div class="card"><span class="tag concept">Done for you</span><h3>Small business app</h3><p>Bookings, quotes, payments and your team in one app with your name on it. Built for salons, cafes, tradies, mechanics and more.</p><a class="more" href="app/">See what the app does</a></div>
+    </div>
+    <p class="note">Concepts use made-up businesses and figures. Your app carries your own branding and the features you choose.</p>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div>
+      <span class="k">Free demo</span>
+      <h2>See it with <span class="g">your business</span> on it</h2>
+      <p>Leave your details and we'll send you a demo built for your business within a day, then give you a quick call to talk it through. No obligation.</p>
+      <p>We help busy people run their businesses better, and we like to get to know the people we work with.</p>
+      <p style="color:var(--text)">Or email <a href="mailto:contact@ascendapps.co.nz">contact@ascendapps.co.nz</a></p>
+    </div>
+    <form class="demo" id="demo-form" data-page="home" data-industry="Other">
+      <label for="f-name">Your name<input id="f-name" name="name" autocomplete="name" required></label>
+      <label for="f-biz">Business name<input id="f-biz" name="business" autocomplete="organization" required></label>
+      <div class="two">
+        <label for="f-phone">Phone<input id="f-phone" name="phone" type="tel" autocomplete="tel" required></label>
+        <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <button class="btn" type="submit">Book my free demo</button>
+      <span id="status" role="status" aria-live="polite"></span>
+      <p class="fine">We only use your details to arrange your demo.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Ascendapps Limited, official Able2 partner NZ. Kiwi owned and operated.</span>
+    <span>In partnership with <a href="https://able2.now/" target="_blank" rel="noopener">Able2</a> &middot; <a href="mailto:contact@ascendapps.co.nz">contact@ascendapps.co.nz</a> &middot; <a href="privacy-policy/">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<script src="js/form.js"></script>
+</body>
+</html>

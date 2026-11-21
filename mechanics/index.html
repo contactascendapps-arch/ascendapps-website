@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Able 2 Assist for mechanics | Ascendapps</title>
+<meta name="description" content="An AI receptionist that answers your workshop phone 24/7, books services and WOFs and sends confirmations. Kiwi owned and operated.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Saira:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<script>window.SH_CONFIG = { site: "able2nz" };</script>
+<script src="https://simple-host.app/auth.js"></script>
+<style>
+.m-phones{display:flex;flex-wrap:wrap;gap:28px 22px;justify-content:center;margin-top:10px}
+.m-item{display:flex;flex-direction:column;align-items:center;gap:12px;width:250px}
+.m-phone{width:250px;height:520px;border-radius:38px;background:#000;padding:9px;box-shadow:0 30px 60px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.07),0 0 60px rgba(129,112,238,.18)}
+.m-scr{position:relative;width:100%;height:100%;border-radius:30px;background:#0E0C1A;overflow:hidden;display:flex;flex-direction:column;font-size:12.5px;color:var(--text)}
+.m-notch{position:absolute;top:7px;left:50%;transform:translateX(-50%);width:80px;height:22px;border-radius:12px;background:#000}
+.m-sb{height:36px;display:flex;justify-content:space-between;align-items:flex-end;padding:0 20px 3px;font-size:10.5px;font-weight:600;color:var(--muted)}
+.m-head{display:flex;align-items:center;gap:8px;padding:10px 14px 8px}
+.m-logo{width:28px;height:28px;border-radius:8px;background:var(--grad);color:#05040B;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:12px;font-family:"Saira",sans-serif}
+.m-title{font-weight:700;font-size:15px}
+.m-body{padding:0 14px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.m-card{background:#17142A;border-radius:12px;padding:10px}
+.m-card b{display:block}
+.m-card span{color:var(--muted);font-size:11px}
+.m-k{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--cyan)}
+.m-pill{display:inline-block;margin-top:6px;padding:4px 10px;border-radius:99px;background:var(--btn);color:#fff;font-weight:700;font-size:10.5px}
+.m-row{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line)}
+.m-row.tot{font-weight:800;border:0;font-size:14px}
+.m-btn{background:var(--btn);border-radius:10px;padding:10px;text-align:center;font-weight:700;color:#fff}
+.m-days{display:grid;grid-template-columns:repeat(5,1fr);gap:5px;text-align:center;font-size:10px;color:var(--muted)}
+.m-days span{padding:6px 0;border-radius:10px;background:#17142A}
+.m-days span.on{background:var(--btn);color:#fff;font-weight:700}
+.m-slots{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.m-slots span{border:1px solid var(--line);border-radius:10px;padding:7px;text-align:center}
+.m-slots span.on{border-color:var(--cyan);color:var(--cyan);font-weight:700}
+.m-chk{display:flex;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line)}
+.m-chk i{width:16px;height:16px;border-radius:5px;border:2px solid var(--line);flex:0 0 auto}
+.m-chk i.on{background:var(--cyan);border-color:var(--cyan)}
+.m-hist{border-left:2px solid var(--violet);padding:2px 0 2px 10px}
+.m-hist b{display:block;font-size:12px}
+.m-hist span{color:var(--muted);font-size:11px}
+.m-cap{text-align:center;font-weight:700}
+.m-cap span{display:block;font-weight:400;color:var(--muted);font-size:14px}
+.m-qr{width:110px;height:110px;margin:6px auto;border-radius:10px;background:repeating-linear-gradient(90deg,#F2F0FA 0 6px,#0E0C1A 6px 12px),#F2F0FA;opacity:.9}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand wm" href="../"><b>Ascendapps</b><small>Official Able2 partner NZ</small></a>
+    <a class="top-call" href="mailto:contact@ascendapps.co.nz">contact@ascendapps.co.nz</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">For independent mechanics and auto workshops</span>
+    <h1>Less time on the phone. <span>More cars out the door.</span></h1>
+    <p class="lead">Every call answered, services and WOFs booked day and night, extra work approved from the customer's phone, and paid before the keys go back. We set up your AI receptionist and your workshop app for you, then look after them, so you keep working.</p>
+    <a class="btn" href="#book">Book a free 15-minute demo</a>
+    <span class="sub-cta">Prefer email? <a href="mailto:contact@ascendapps.co.nz">contact@ascendapps.co.nz</a></span>
+  </div>
+</div>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Sound <span>familiar?</span></h2>
+    <p class="section-lead">Every missed call is a job going to the next garage. Here's what changes when we set you up.</p>
+    <div class="pain" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+      <div><strong style="font-style:italic">"I'm under a car when the phone rings, so it goes to voicemail and they ring the next workshop."</strong><p>Your AI receptionist answers every call on your own number and books the service, any hour.</p></div>
+      <div><strong style="font-style:italic">"I find the worn brake pads, then spend twenty minutes trying to reach the owner to say yes."</strong><p>The quote goes to their phone. They see the price, tap approve, and you keep working.</p></div>
+      <div><strong style="font-style:italic">"Cars sit finished in the yard while I chase the invoice."</strong><p>They pay from a link or a QR code before the keys go back, straight into your own account.</p></div>
+      <div><strong style="font-style:italic">"When a regular comes in, nobody can find what we did to the car last time."</strong><p>Every vehicle and every customer has its own record, so the whole team sees the history.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>See the <span>workshop app</span></h2>
+    <p class="section-lead">Your receptionist and your app work together. Here's what you and your customers see, branded with your workshop's name and logo.</p>
+    <div class="m-phones">
+      <div class="m-item"><div class="m-phone"><div class="m-scr"><div class="m-notch"></div><div class="m-sb"><span>7:42</span><span>5G</span></div>
+        <div class="m-head"><span class="m-logo">HA</span><span class="m-title">Calls today</span></div>
+        <div class="m-body">
+          <div class="m-card" style="border:1px solid var(--cyan)"><span class="m-k">Just now</span><b>Call answered</b><span>Mark, 021 mobile</span><br><span class="m-pill">Booked · WOF Thu 8:00am</span></div>
+          <div class="m-card"><span class="m-k">Call summary</span><b>Noise from front wheel</b><span>Booked in for a check, Friday 9:30am.</span></div>
+          <div class="m-card"><span class="m-k">Message</span><b>Call back about a quote</b><span>Jess, timing belt on a 2015 Corolla.</span></div>
+          <div class="m-card"><span class="m-k">6:58pm</span><b>After-hours booking</b><span>Full service, Monday 8:00am.</span></div>
+        </div></div></div>
+        <div class="m-cap">Every call answered<span>Bookings, messages and a summary of every call</span></div></div>
+      <div class="m-item"><div class="m-phone"><div class="m-scr"><div class="m-notch"></div><div class="m-sb"><span>9:41</span><span>5G</span></div>
+        <div class="m-head"><span class="m-logo">HA</span><span class="m-title">Book a service</span></div>
+        <div class="m-body">
+          <div class="m-card"><b>WOF</b><span>45 minutes · $65</span></div>
+          <div class="m-card" style="border:1px solid var(--violet)"><b>Full service and WOF</b><span>2 hours · from $289</span></div>
+          <div class="m-days"><span>Mon</span><span>Tue</span><span class="on">Wed</span><span>Thu</span><span>Fri</span></div>
+          <div class="m-slots"><span>8:00 am</span><span class="on">9:30 am</span><span>11:00 am</span><span>1:30 pm</span></div>
+          <div class="m-btn">Book and pay deposit</div>
+        </div></div></div>
+        <div class="m-cap">Online bookings<span>Any hour, straight into your calendar</span></div></div>
+      <div class="m-item"><div class="m-phone"><div class="m-scr"><div class="m-notch"></div><div class="m-sb"><span>11:05</span><span>5G</span></div>
+        <div class="m-head"><span class="m-logo">HA</span><span class="m-title">Quote #1042</span></div>
+        <div class="m-body">
+          <div class="m-card"><span>2018 Ford Ranger · KDX492</span></div>
+          <div class="m-row"><span>Front brake pads</span><span>$180</span></div>
+          <div class="m-row"><span>Brake fluid flush</span><span>$95</span></div>
+          <div class="m-chk"><i class="on"></i><span>Wiper blades (optional) $45</span></div>
+          <div class="m-chk"><i></i><span>Cabin filter (optional) $60</span></div>
+          <div class="m-row tot"><span>Total</span><span>$320</span></div>
+          <div class="m-btn">Approve</div>
+        </div></div></div>
+        <div class="m-cap">Extra work, approved<span>One tap on the customer's phone</span></div></div>
+      <div class="m-item"><div class="m-phone"><div class="m-scr"><div class="m-notch"></div><div class="m-sb"><span>2:18</span><span>5G</span></div>
+        <div class="m-head"><span class="m-logo">HA</span><span class="m-title">Vehicle record</span></div>
+        <div class="m-body">
+          <div class="m-card"><b>2018 Ford Ranger</b><span>KDX492 · owner Mark Thompson · 142,300 km</span></div>
+          <div class="m-hist"><b>Front brake pads</b><span>Today · approved by phone</span></div>
+          <div class="m-hist"><b>Full service and WOF</b><span>12 May · next WOF due Nov</span></div>
+          <div class="m-hist"><b>Tyres x2</b><span>3 Feb · Bridgestone, rear</span></div>
+          <div class="m-hist"><b>Note</b><span>Prefers early drop-off</span></div>
+          <div class="m-btn">Book next visit</div>
+        </div></div></div>
+        <div class="m-cap">Every car's history<span>The whole team sees what was done last time</span></div></div>
+      <div class="m-item"><div class="m-phone"><div class="m-scr"><div class="m-notch"></div><div class="m-sb"><span>3:40</span><span>5G</span></div>
+        <div class="m-head"><span class="m-logo">HA</span><span class="m-title">Inspection</span></div>
+        <div class="m-body">
+          <div class="m-card"><span>KDX492 · Bay 2 · Tama</span></div>
+          <div class="m-chk"><i class="on"></i><span>Brakes and pads</span></div>
+          <div class="m-chk"><i class="on"></i><span>Tyres and tread depth</span></div>
+          <div class="m-chk"><i class="on"></i><span>Lights and indicators</span></div>
+          <div class="m-chk"><i class="on"></i><span>Fluids topped up</span></div>
+          <div class="m-chk"><i></i><span>Road test</span></div>
+          <div class="m-btn">Save to job file</div>
+        </div></div></div>
+        <div class="m-cap">Checklists at the hoist<span>Filled in on a phone and kept on file</span></div></div>
+      <div class="m-item"><div class="m-phone"><div class="m-scr"><div class="m-notch"></div><div class="m-sb"><span>4:55</span><span>5G</span></div>
+        <div class="m-head"><span class="m-logo">HA</span><span class="m-title">Pay for your service</span></div>
+        <div class="m-body">
+          <div class="m-card"><b>Harbour Auto</b><span>Invoice #2210 · KDX492</span></div>
+          <div class="m-row"><span>Brakes and fluid</span><span>$275</span></div>
+          <div class="m-row"><span>Wiper blades</span><span>$45</span></div>
+          <div class="m-row tot"><span>Total</span><span>$320</span></div>
+          <div class="m-qr" aria-hidden="true"></div>
+          <div class="m-btn">Pay now</div>
+        </div></div></div>
+        <div class="m-cap">Paid before the keys go back<span>By link or QR code, into your own account</span></div></div>
+    </div>
+    <div class="demo-band" style="margin-top:36px">
+      <div>
+        <h2>This could be your workshop</h2>
+        <p>These are example screens for a made-up workshop. Yours carry your workshop's name, logo and colours, with your own services, prices and team. We set it all up for you, so you don't build anything. Book a demo and we'll show you the app with your business on it.</p>
+      </div>
+      <a class="btn" href="#book">Book a demo with my branding</a>
+    </div>
+
+    <h2 style="margin-top:64px">What Able 2 Assist does for you</h2>
+    <p class="section-lead">It works like a receptionist who never takes a break, never puts anyone on hold and never forgets to write it down.</p>
+    <ul class="features"><li><span class="tick">&#10003;</span><div><strong>Answers 24/7</strong><span class="d">Days, nights, weekends and public holidays. No call goes unanswered.</span></div></li><li><span class="tick">&#10003;</span><div><strong>Keeps your own number</strong><span class="d">Customers ring the same NZ number they always have.</span></div></li><li><span class="tick">&#10003;</span><div><strong>Takes bookings, quotes and payments</strong><span class="d">Right there on the call, so the booking is locked in.</span></div></li><li><span class="tick">&#10003;</span><div><strong>Takes messages</strong><span class="d">And answers the common questions you set up, like opening hours and location.</span></div></li><li><span class="tick">&#10003;</span><div><strong>Sends confirmations</strong><span class="d">Your customer gets their booking confirmed by email, straight away.</span></div></li><li><span class="tick">&#10003;</span><div><strong>Tells you straight away</strong><span class="d">Push notifications to you and your team through your app, plus email.</span></div></li><li><span class="tick">&#10003;</span><div><strong>Your own app, included</strong><span class="d">See who called, what they wanted and what they booked, with a full transcript. Every caller is added to your client list.</span></div></li><li><span class="tick">&#10003;</span><div><strong>See what it earns you</strong><span class="d">Call tracking is built in, so after a month you can see exactly where it made you money.</span></div></li></ul>
+    <h2 style="margin-top:48px">Plus the workshop app that comes with it</h2><p class="section-lead">Your own branded app is included, so the phone is only the start.</p><ul class="features"><li><span class="tick">&#10003;</span><div><strong>Quotes approved by phone</strong><span class="d">Found worn brake pads? Send the quote to the customer's phone. They see the price, tap approve, and you keep working.</span></div></li><li><span class="tick">&#10003;</span><div><strong>Paid before the keys go back</strong><span class="d">Customers pay by link or by scanning a QR code. The money goes straight into your own Stripe account.</span></div></li><li><span class="tick">&#10003;</span><div><strong>Every car's history</strong><span class="d">Each vehicle and customer has its own record, so the whole team can see what was done last time.</span></div></li><li><span class="tick">&#10003;</span><div><strong>Checklists at the hoist</strong><span class="d">Inspection checklists and job forms filled in on a phone and kept on file.</span></div></li></ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How a job runs <span>with your app</span></h2>
+    <p class="section-lead">Your customers never need to download anything. Only you and your team use the app.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px">
+      <div style="background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px"><span class="eyebrow">Your customer</span><ol style="margin:0;padding-left:20px;color:var(--muted);display:grid;gap:8px"><li>Books a service on your booking page, or calls and your receptionist books it.</li><li>Gets the quote for any extra work on their phone and taps approve.</li><li>Pays from a link or your QR code, and picks up the keys.</li></ol></div>
+      <div style="background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px"><span class="eyebrow">Your team</span><ol style="margin:0;padding-left:20px;color:var(--muted);display:grid;gap:8px"><li>Sees today's bookings and each car's history before it rolls in.</li><li>Fills in the inspection checklist on a phone at the hoist.</li><li>Sends the quote, gets the yes, and finishes the job.</li></ol></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="demo-band">
+      <div>
+        <h2>See how it would work for your workshop</h2>
+        <p>On your demo call, we'll walk you through how Able 2 Assist answers, books the job and sends you the details, set up around how your workshop runs.</p>
+      </div>
+      <a class="btn" href="#book">Book my demo</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="section-lead">Everything is done for you. You don't need to set anything up or learn any new software.</p>
+    <div class="steps">
+      <div><strong>Book a demo</strong><p>A 15-minute call. We show you how it works and you ask anything you like.</p></div>
+      <div><strong>We set it up</strong><p>We learn how your business works, set up the answers and the booking details, and connect your number.</p></div>
+      <div><strong>It answers your calls</strong><p>From day one, every call is answered, every booking is confirmed and you're told straight away.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What are missed calls costing you?</h2>
+    <p class="section-lead">Put in your own numbers. Most owners are surprised how quickly it adds up.</p>
+    <div class="calc" id="mcalc">
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><label for="mc-calls" style="margin:0">Calls you miss each week</label><strong id="mc-calls-out" style="font-family:'Saira',sans-serif;font-size:26px;color:var(--cyan)">8</strong></div><input id="mc-calls" type="range" min="1" max="60" step="1" value="8" style="width:100%;height:32px;padding:0;border:0;background:transparent;accent-color:#1CD9E0;cursor:pointer"></div>
+        <div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><label for="mc-value" style="margin:0">Average job value</label><strong id="mc-value-out" style="font-family:'Saira',sans-serif;font-size:26px;color:var(--cyan)">NZ$250</strong></div><input id="mc-value" type="range" min="50" max="2000" step="25" value="250" style="width:100%;height:32px;padding:0;border:0;background:transparent;accent-color:#1CD9E0;cursor:pointer"></div>
+        <div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px"><label for="mc-pct" style="margin:0">Missed callers who'd have booked</label><strong id="mc-pct-out" style="font-family:'Saira',sans-serif;font-size:26px;color:var(--cyan)">40%</strong></div><input id="mc-pct" type="range" min="5" max="80" step="5" value="40" style="width:100%;height:32px;padding:0;border:0;background:transparent;accent-color:#1CD9E0;cursor:pointer"></div>
+      </div>
+      <div class="calc-result">
+        <p>Work you could be missing each month</p>
+        <div class="big" id="mc-out">NZ$0</div>
+        <p>That's about <strong id="mc-jobs">0</strong> bookings a month going to someone else, or <strong id="mc-year">NZ$0</strong> a year.</p>
+        <p style="margin-top:10px">Bookings a month to cover Business Lite: <strong id="mc-break">0</strong></p>
+        <a class="btn" href="#book" style="margin-top:16px;text-align:center">Book a demo</a>
+        <p class="cost">Plans start from NZ$449 a month. For most workshops, two or three bookings a month covers it, and you never have to put your tools down for the phone again.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Simple pricing</h2>
+    <p class="section-lead">One setup fee, then a monthly plan that fits how busy your phone is. Your phone number and your own app are included.</p>
+    <div class="price">
+      <div class="price-card">
+        <div class="label">Setup</div>
+        <div class="amount">NZ$1,200 <small>one-off</small></div>
+        <p>Done for you, start to finish. No DIY setup. We learn your business, set up every answer, connect your number and look after it from there.</p>
+      </div>
+      <div class="price-card main">
+        <div class="label">Monthly plans</div>
+        <div class="amount">from NZ$449 <small>a month</small></div>
+        <p>Pick the plan that fits how many calls you get. Minimum six month term.</p>
+      </div>
+    </div>
+    <div class="plans">
+      <div class="plan"><div class="label">Business Lite</div><div class="amount">NZ$449 <small>a month</small></div><p class="mins">300 minutes a month</p><p>For smaller businesses that want AI backup. Runs 24/7.</p></div>
+      <div class="plan"><div class="label">Business</div><div class="amount">NZ$649 <small>a month</small></div><p class="mins">500 minutes a month</p><p>A full-time AI receptionist. Every call handled.</p></div>
+      <div class="plan"><div class="label">Business Max</div><div class="amount">NZ$1,199 <small>a month</small></div><p class="mins">1,200 minutes a month</p><p>For high volume, more than one location or a phone that never stops.</p></div>
+    </div>
+    <p class="price-note">Minutes reset each month, and unused minutes don't roll over. On your demo we'll look at how many calls you actually get and put you on the right plan. All plans have a minimum six month term. All prices in NZ dollars.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap faq">
+    <h2>Common questions</h2>
+    <details><summary>Do I keep my phone number?</summary><p>Yes. Customers keep calling the same NZ number they always have.</p></details>
+    <details><summary>What happens if it can't answer a question?</summary><p>It takes a message and sends it to you straight away, so you can call the customer back.</p></details>
+    <details><summary>Can it tell people what a job will cost?</summary><p>Yes. It gives quotes for the services you set up with us. Anything unusual is passed straight to you with the details.</p></details>
+    <details><summary>Do my customers need to download an app?</summary><p>No. Only you and your team use the app. Your customers just ring your number like they always have.</p></details>
+    <details><summary>How do customer payments work?</summary><p>Customers pay by link or QR code, and the money goes straight into your own Stripe account. Payments carry a 2% platform fee.</p></details>
+    <details><summary>Is there a contract?</summary><p>There's a minimum six month term. After that it carries on month to month.</p></details>
+    <details><summary>Does it replace my accounting software or parts supplier?</summary><p>No. It works alongside them. It handles your phone, bookings, quotes, payments and customer records.</p></details>
+    <details><summary>How are customers reminded about bookings?</summary><p>By email and push notification, not text.</p></details>
+    <details><summary>Who sets it all up?</summary><p>We do. We set up your receptionist and your workshop app with your name, logo, services and prices, connect your number, and look after it from there. You don't build anything.</p></details>
+    <details><summary>Who are you?</summary><p>We're Ascendapps Limited, official Able2 partner NZ, Kiwi owned and operated. We work with our partners at <a href="https://able2.now/" target="_blank" rel="noopener">Able2</a> in Australia.</p></details>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap grid">
+    <div>
+      <h2>Book your free demo</h2>
+      <p>Fifteen minutes, no obligation. Leave your details and we'll be in touch within one business day to find a time that suits you.</p>
+      <p class="call-line">Or email <a href="mailto:contact@ascendapps.co.nz">contact@ascendapps.co.nz</a></p>
+    </div>
+    <form class="demo" id="demo-form" data-page="mechanics" data-industry="Mechanic">
+      <label>Your name<input name="name" autocomplete="name" required></label>
+      <label>Business name<input name="business" autocomplete="organization" required></label>
+      <div class="row">
+        <label>Phone<input name="phone" type="tel" autocomplete="tel" required></label>
+        <label>Email<input name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <button class="btn" type="submit">Book my demo</button>
+      <span id="status" role="status" aria-live="polite"></span>
+      <p class="fine">We only use your details to arrange your demo.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Ascendapps Limited, official Able2 partner NZ. Kiwi owned and operated.</span>
+    <span><a href="mailto:contact@ascendapps.co.nz">contact@ascendapps.co.nz</a> &middot; <a href="../privacy-policy/">Privacy Policy</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var MONTHLY=449, money=function(n){return 'NZ$'+Math.round(n).toLocaleString('en-NZ');};
+  var $=function(id){return document.getElementById(id);};
+  var c=$('mc-calls'), v=$('mc-value'), p=$('mc-pct');
+  if(!c) return;
+  function upd(){
+    var jobs=(+c.value)*4.33*((+p.value)/100), lost=jobs*(+v.value);
+    $('mc-calls-out').textContent=c.value; $('mc-value-out').textContent=money(+v.value); $('mc-pct-out').textContent=p.value+'%';
+    $('mc-out').textContent=money(lost); $('mc-year').textContent=money(lost*12); $('mc-jobs').textContent=Math.round(jobs); $('mc-break').textContent=Math.ceil(MONTHLY/(+v.value));
+  }
+  [c,v,p].forEach(function(el){el.addEventListener('input',upd);});
+  upd();
+})();
+</script>
+<script src="../js/form.js"></script>
+</body>
+</html>

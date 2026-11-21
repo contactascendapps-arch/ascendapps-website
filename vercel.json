@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/solo", "destination": "/assist/", "permanent": true },
+    { "source": "/solo/:path*", "destination": "/assist/", "permanent": true }
+  ]
+}

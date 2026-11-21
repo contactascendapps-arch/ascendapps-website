@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Your Yacht's Crew App | Ascendapps</title>
+<meta name="description" content="An example of a superyacht's own private crew app: onboarding, rotas, crew chat, wellbeing check-ins and a guest side, all in the yacht's branding.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+<script>window.SH_CONFIG = { site: "able2nz" };</script>
+<script src="https://simple-host.app/auth.js"></script>
+<style>
+:root { --navy: #0D2436; --deep: #081826; --ocean: #1F6F8B; --sea: #E3F1F5; --sand: #F6F1E8; --gold: #C9A24D; --ink: #12202B; --muted: #5F6F7A; --line: #DCE5EA; --white: #FFFFFF; --good: #2E8B6A; --serif: "Cormorant Garamond", Georgia, serif; --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: var(--sans); color: var(--white); background: linear-gradient(180deg, var(--deep) 0%, var(--navy) 60%, #12384F 100%); line-height: 1.55; }
+.wrap { max-width: 1320px; margin: 0 auto; padding: 0 20px; }
+header.intro { padding: 56px 0 28px; text-align: center; }
+.tag { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); border: 1px solid rgba(201,162,77,0.5); border-radius: 999px; padding: 6px 14px; margin-bottom: 18px; }
+h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(36px, 5.4vw, 60px); line-height: 1.05; margin: 0 0 14px; }
+.intro p { color: #C9D6DE; max-width: 680px; margin: 0 auto; font-size: 18px; }
+.phones { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px 28px; padding: 36px 0 20px; }
+.item { display: flex; flex-direction: column; align-items: center; gap: 16px; max-width: 300px; }
+.cap { text-align: center; }
+.cap strong { display: block; font-size: 16px; margin-bottom: 4px; }
+.cap span { color: #B7C7D1; font-size: 14px; }
+.phone { width: 290px; height: 600px; border-radius: 44px; background: #0A0F14; padding: 10px; box-shadow: 0 30px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.06); }
+.screen { width: 100%; height: 100%; border-radius: 35px; background: var(--white); color: var(--ink); overflow: hidden; position: relative; display: flex; flex-direction: column; font-size: 13px; }
+.notch { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 92px; height: 24px; background: #0A0F14; border-radius: 14px; z-index: 3; }
+.bar { height: 40px; flex: 0 0 auto; display: flex; justify-content: space-between; align-items: flex-end; padding: 0 22px 4px; font-size: 11px; font-weight: 600; }
+.top { padding: 8px 18px 12px; display: flex; align-items: center; gap: 10px; }
+.top .title { font-weight: 700; font-size: 16px; }
+.top .back { color: var(--ocean); font-size: 18px; }
+.body { flex: 1; overflow: hidden; padding: 0 16px 16px; display: flex; flex-direction: column; gap: 12px; }
+.brand { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 4px 0 6px; }
+.brand .name { font-family: var(--serif); font-size: 22px; font-weight: 600; letter-spacing: 0.06em; color: var(--navy); }
+.brand .sub { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+.hero-card { border-radius: 16px; padding: 14px; color: var(--white); background: linear-gradient(135deg, var(--ocean), var(--navy)); }
+.hero-card .small { font-size: 11px; opacity: 0.8; }
+.hero-card .big { font-size: 15px; font-weight: 600; margin-top: 2px; }
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.tile { border: 1px solid var(--line); border-radius: 14px; padding: 10px 6px; text-align: center; font-size: 11px; font-weight: 600; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.tile i { width: 30px; height: 30px; border-radius: 10px; background: var(--sea); display: flex; align-items: center; justify-content: center; font-style: normal; color: var(--ocean); font-size: 15px; }
+.today { background: var(--sand); border-radius: 14px; padding: 12px; }
+.today h4 { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+.today div { display: flex; justify-content: space-between; padding: 3px 0; }
+.q { font-weight: 600; font-size: 15px; }
+.moods { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.mood { border: 1px solid var(--line); background: var(--white); border-radius: 12px; padding: 8px 0; font: inherit; font-size: 10px; color: var(--ink); cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.mood b { font-size: 16px; color: var(--ocean); }
+.mood.on { border-color: var(--ocean); background: var(--sea); }
+.field { border: 1px solid var(--line); border-radius: 12px; padding: 10px; color: var(--muted); min-height: 54px; }
+.row { display: flex; justify-content: space-between; align-items: center; }
+.toggle { width: 38px; height: 22px; border-radius: 999px; background: var(--line); position: relative; border: 0; cursor: pointer; }
+.toggle::after { content: ""; position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: var(--white); transition: left 0.15s; }
+.toggle.on { background: var(--ocean); }
+.toggle.on::after { left: 19px; }
+.cta { background: var(--navy); color: var(--white); border: 0; border-radius: 12px; padding: 12px; font: inherit; font-weight: 600; cursor: pointer; width: 100%; }
+.note { font-size: 10.5px; color: var(--muted); text-align: center; }
+.done { color: var(--good); font-weight: 600; text-align: center; min-height: 16px; font-size: 12px; }
+.days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; font-size: 10px; }
+.days span { padding: 6px 0; border-radius: 10px; color: var(--muted); }
+.days span.on { background: var(--navy); color: var(--white); font-weight: 600; }
+.shift { border-left: 3px solid var(--ocean); background: var(--sea); border-radius: 8px; padding: 8px 10px; }
+.shift.gold { border-color: var(--gold); background: var(--sand); }
+.shift b { display: block; font-size: 12px; }
+.shift span { color: var(--muted); font-size: 11px; }
+.progress { height: 8px; background: var(--line); border-radius: 999px; overflow: hidden; }
+.progress div { height: 100%; width: 57%; background: var(--ocean); }
+.check { display: flex; gap: 10px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.box { width: 18px; height: 18px; border-radius: 6px; border: 2px solid var(--line); flex: 0 0 auto; display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--white); }
+.box.ok { background: var(--good); border-color: var(--good); }
+.group { display: flex; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.av { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 11px; color: var(--white); flex: 0 0 auto; }
+.group b { display: block; font-size: 12.5px; }
+.group span { color: var(--muted); font-size: 11px; }
+.chart { display: flex; align-items: flex-end; gap: 8px; height: 120px; padding: 8px 4px 0; border-bottom: 1px solid var(--line); }
+.chart div { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 10px; color: var(--muted); }
+.chart i { display: block; width: 100%; border-radius: 6px 6px 2px 2px; background: var(--ocean); }
+.stat { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.stat div { background: var(--sea); border-radius: 12px; padding: 10px; }
+.stat b { display: block; font-size: 18px; color: var(--navy); }
+.stat span { font-size: 10.5px; color: var(--muted); }
+.flag { background: #FFF5E5; border: 1px solid #F1D9A8; border-radius: 12px; padding: 10px; font-size: 11.5px; }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.gallery div { aspect-ratio: 1; border-radius: 10px; }
+.service { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); }
+.service b { display: block; font-size: 12.5px; }
+.service span { color: var(--muted); font-size: 11px; }
+.book { background: var(--gold); color: var(--white); border-radius: 999px; padding: 5px 12px; font-size: 11px; font-weight: 600; }
+.tabbar { flex: 0 0 auto; display: flex; justify-content: space-around; padding: 10px 0 16px; border-top: 1px solid var(--line); font-size: 10px; color: var(--muted); }
+.tabbar .on { color: var(--navy); font-weight: 700; }
+.gcard { border: 1px solid var(--line); border-radius: 14px; padding: 12px; }
+.gcard .who { font-weight: 700; font-size: 14px; }
+.gcard .from { color: var(--muted); font-size: 11px; }
+.kv { display: flex; justify-content: space-between; gap: 8px; padding: 4px 0; font-size: 11.5px; border-bottom: 1px dashed var(--line); }
+.kv span:first-child { color: var(--muted); }
+.kv b { text-align: right; }
+.alert { background: #FDECEC; border: 1px solid #F3C2C2; color: #8A1F1F; border-radius: 10px; padding: 8px 10px; font-size: 11.5px; font-weight: 600; }
+.chips { display: flex; gap: 6px; flex-wrap: wrap; }
+.chips span { background: var(--sea); color: var(--navy); border-radius: 999px; padding: 4px 10px; font-size: 10.5px; font-weight: 600; }
+.chips span.on { background: var(--navy); color: var(--white); }
+.facts { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.facts div { background: var(--sea); border-radius: 10px; padding: 7px 9px; }
+.facts b { display: block; font-size: 12.5px; color: var(--navy); }
+.facts span { font-size: 10px; color: var(--muted); }
+.glist { display: flex; flex-direction: column; }
+.gl { display: flex; justify-content: space-between; align-items: center; gap: 6px; padding: 3px 0; border-bottom: 1px solid var(--line); }
+.gl b { display: block; font-size: 11.5px; }
+.gl span.c { color: var(--muted); font-size: 10px; }
+.tg { border-radius: 999px; padding: 2px 8px; font-size: 9.5px; font-weight: 700; white-space: nowrap; }
+.tg.red { background: #FDECEC; color: #8A1F1F; }
+.tg.blue { background: var(--sea); color: var(--navy); }
+.tg.gold { background: var(--sand); color: #7A5A12; }
+.occ { background: var(--sand); border-radius: 10px; padding: 7px 10px; font-size: 11px; }
+.pay { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--line); }
+.pay b { display: block; font-size: 12px; }
+.pay span { color: var(--muted); font-size: 10.5px; }
+.pay span.paid { color: var(--good); font-weight: 700; font-size: 11px; }
+.due { background: var(--navy); color: var(--white); border-radius: 999px; padding: 4px 10px; font-size: 10.5px; font-weight: 600; }
+.pay span.due { color: var(--white); }
+section.close { padding: 40px 0 70px; }
+.panel { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+.panel h2 { font-family: var(--serif); font-weight: 600; font-size: 36px; line-height: 1.1; margin: 0 0 12px; }
+.panel p { color: #C9D6DE; margin: 0 0 12px; }
+.panel ul { margin: 0; padding-left: 18px; color: #C9D6DE; }
+.panel li { margin-bottom: 6px; }
+form.demo { background: var(--white); color: var(--ink); border-radius: 16px; padding: 22px; }
+form.demo label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 12px; }
+form.demo input { display: block; width: 100%; margin-top: 6px; font: inherit; font-weight: 400; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; }
+form.demo input:focus { outline: 2px solid var(--ocean); border-color: var(--ocean); }
+form.demo .two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+form.demo button { width: 100%; background: var(--navy); color: var(--white); border: 0; border-radius: 999px; padding: 13px; font: inherit; font-weight: 700; cursor: pointer; }
+form.demo .fine { font-size: 12px; color: var(--muted); margin: 10px 0 0; }
+#status { display: block; margin-top: 10px; font-weight: 600; font-size: 14px; }
+#status.ok { color: var(--good); }
+#status.err { color: #B00020; }
+footer { text-align: center; color: #9FB2BE; font-size: 13px; padding: 0 0 40px; }
+footer b { color: var(--white); }
+@media (max-width: 760px) { .panel { grid-template-columns: 1fr; padding: 22px; } form.demo .two { grid-template-columns: 1fr; } header.intro { padding-top: 36px; } }
+</style>
+</head>
+<body>
+
+<header class="intro">
+  <div class="wrap">
+    <span class="tag">Made-up demo</span>
+    <h1>Your yacht's own crew app</h1>
+    <p>One private hub for your crew: onboarding and documents, rotas and crew chat, daily wellbeing check-ins, a guest portal with every guest's details and preferences, and payments. This example uses a made-up yacht, M/Y Tarakihi. Yours carries your yacht's name, logo, colours and crew.</p>
+    <p style="margin-top:16px;display:inline-block;background:rgba(201,162,77,0.14);border:1px solid rgba(201,162,77,0.45);border-radius:12px;padding:10px 16px;color:#F3E6C4;font-size:15px">This is a made-up demo. The yacht, crew, guests and figures are all examples. Your app will have your own branding and the functionality you choose.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="phones">
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>07:42</span><span>5G</span></div>
+        <div class="body">
+          <div class="brand">
+            <svg width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="none" stroke="#C9A24D" stroke-width="1.5"/><path d="M20 8v20M13 14h14M10 23c2 6 7 8 10 8s8-2 10-8" fill="none" stroke="#0D2436" stroke-width="2" stroke-linecap="round"/></svg>
+            <span class="name">M/Y TARAKIHI</span>
+            <span class="sub">Crew hub</span>
+          </div>
+          <div class="hero-card"><div class="small">Kia ora, Sam</div><div class="big">Day 12 of the season. Guests arrive 14:00.</div></div>
+          <div class="tiles">
+            <div class="tile"><i>&#9786;</i>Check-in</div>
+            <div class="tile"><i>&#9776;</i>Rota</div>
+            <div class="tile"><i>&#9993;</i>Crew chat</div>
+            <div class="tile"><i>&#10003;</i>Onboarding</div>
+            <div class="tile"><i>&#9636;</i>Documents</div>
+            <div class="tile"><i>&#9829;</i>Support</div>
+          </div>
+          <div class="today"><h4>Today</h4>
+            <div><span>Deck on station</span><b>13:30</b></div>
+            <div><span>Guest arrival</span><b>14:00</b></div>
+            <div><span>Crew briefing</span><b>17:30</b></div>
+          </div>
+        </div>
+        <div class="tabbar"><span class="on">Home</span><span>Rota</span><span>Chat</span><span>Me</span></div>
+      </div></div>
+      <div class="cap"><strong>Crew home</strong><span>Everything the crew needs, on the phone that goes where they go.</span></div>
+    </div>
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>07:44</span><span>5G</span></div>
+        <div class="top"><span class="back">&#8249;</span><span class="title">Daily check-in</span></div>
+        <div class="body">
+          <div class="q">How are you today?</div>
+          <div class="moods" id="moods">
+            <button class="mood" type="button"><b>1</b>Rough</button>
+            <button class="mood" type="button"><b>2</b>Low</button>
+            <button class="mood" type="button"><b>3</b>OK</button>
+            <button class="mood on" type="button"><b>4</b>Good</button>
+            <button class="mood" type="button"><b>5</b>Great</button>
+          </div>
+          <div class="row"><span>Sleep last night</span><b>6.5 hrs</b></div>
+          <div class="field">Anything on your mind? (optional)</div>
+          <div class="row"><span>Share my name with the captain</span><button class="toggle" id="share" type="button" aria-label="Share my name with the captain" aria-pressed="false"></button></div>
+          <button class="cta" id="send" type="button">Send check-in</button>
+          <div class="done" id="done"></div>
+          <div class="note">The captain sees crew trends. Your name only if you choose.</div>
+        </div>
+      </div></div>
+      <div class="cap"><strong>Daily wellbeing check-in</strong><span>Thirty seconds a day. Tap through it to try.</span></div>
+    </div>
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>08:10</span><span>5G</span></div>
+        <div class="top"><span class="title">Captain's view</span></div>
+        <div class="body">
+          <div class="row"><b>Crew wellbeing, this week</b><span style="color:var(--muted);font-size:11px">14 crew</span></div>
+          <div class="chart" aria-label="Average check-in score by day">
+            <div><i style="height:74px"></i>M</div>
+            <div><i style="height:80px"></i>T</div>
+            <div><i style="height:62px"></i>W</div>
+            <div><i style="height:54px"></i>T</div>
+            <div><i style="height:70px"></i>F</div>
+            <div><i style="height:84px"></i>S</div>
+            <div><i style="height:88px"></i>S</div>
+          </div>
+          <div class="stat">
+            <div><b>93%</b><span>Checked in this week</span></div>
+            <div><b>3.9</b><span>Average of 5</span></div>
+          </div>
+          <div class="flag">Interior dipped midweek after the double turnaround. Worth a word at Friday's briefing.</div>
+          <div class="note">Example figures. Trends only, no names unless crew share them.</div>
+        </div>
+      </div></div>
+      <div class="cap"><strong>Captain's view</strong><span>See how the crew is going before it shows up as a resignation.</span></div>
+    </div>
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>06:05</span><span>5G</span></div>
+        <div class="top"><span class="title">Rota</span></div>
+        <div class="body">
+          <div class="days"><span>Mon</span><span>Tue</span><span class="on">Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+          <div class="shift"><b>Deck: wash down</b><span>06:00 to 09:00 &middot; Sam, Tama, Jules</span></div>
+          <div class="shift gold"><b>Guest arrival</b><span>13:30 on station &middot; All deck</span></div>
+          <div class="shift"><b>Tender runs</b><span>14:00 to 18:00 &middot; Tama</span></div>
+          <div class="shift"><b>Anchor watch</b><span>22:00 to 02:00 &middot; Jules</span></div>
+          <div class="shift gold"><b>Day off</b><span>Thursday &middot; Sam</span></div>
+        </div>
+        <div class="tabbar"><span>Home</span><span class="on">Rota</span><span>Chat</span><span>Me</span></div>
+      </div></div>
+      <div class="cap"><strong>Rotas</strong><span>One rota everyone sees, changed in one place.</span></div>
+    </div>
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>09:20</span><span>5G</span></div>
+        <div class="top"><span class="back">&#8249;</span><span class="title">Onboarding</span></div>
+        <div class="body">
+          <div class="row"><b>Welcome aboard, Mia</b><span style="color:var(--muted);font-size:11px">4 of 7</span></div>
+          <div class="progress"><div></div></div>
+          <div class="check"><span class="box ok">&#10003;</span>Contract signed</div>
+          <div class="check"><span class="box ok">&#10003;</span>Safety induction video</div>
+          <div class="check"><span class="box ok">&#10003;</span>Muster stations</div>
+          <div class="check"><span class="box ok">&#10003;</span>Uniform sizes</div>
+          <div class="check"><span class="box"></span>Guest service standards</div>
+          <div class="check"><span class="box"></span>Emergency contacts</div>
+          <div class="check"><span class="box"></span>Crew handbook</div>
+        </div>
+      </div></div>
+      <div class="cap"><strong>Onboarding and documents</strong><span>Every new starter gets the same induction, whoever is on shift.</span></div>
+    </div>
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>12:02</span><span>5G</span></div>
+        <div class="top"><span class="title">Crew chat</span></div>
+        <div class="body">
+          <div class="group"><span class="av" style="background:#0D2436">ALL</span><div><b>All crew</b><span>Captain: Briefing moved to 17:30</span></div></div>
+          <div class="group"><span class="av" style="background:#1F6F8B">DK</span><div><b>Deck</b><span>Tama: Tender fuelled and ready</span></div></div>
+          <div class="group"><span class="av" style="background:#C9A24D">IN</span><div><b>Interior</b><span>Mia: Cabins 2 and 4 done</span></div></div>
+          <div class="group"><span class="av" style="background:#2E8B6A">EN</span><div><b>Engineering</b><span>Chief: Genny service Thursday</span></div></div>
+          <div class="group"><span class="av" style="background:#7A5C99">GL</span><div><b>Galley</b><span>Chef: Provisioning list updated</span></div></div>
+          <div class="group"><span class="av" style="background:#5F6F7A">WB</span><div><b>Wellbeing</b><span>Yoga on the sun deck, 06:30</span></div></div>
+        </div>
+        <div class="tabbar"><span>Home</span><span>Rota</span><span class="on">Chat</span><span>Me</span></div>
+      </div></div>
+      <div class="cap"><strong>Crew chat</strong><span>Team channels instead of shouting across the deck or a group text.</span></div>
+    </div>
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>15:30</span><span>5G</span></div>
+        <div class="body" style="padding-top:6px">
+          <div class="brand"><span class="name">M/Y TARAKIHI</span><span class="sub">Guest experience</span></div>
+          <div class="gallery">
+            <div style="background:linear-gradient(135deg,#1F6F8B,#8FD3E0)"></div>
+            <div style="background:linear-gradient(135deg,#C9A24D,#F6E3B4)"></div>
+            <div style="background:linear-gradient(135deg,#0D2436,#1F6F8B)"></div>
+            <div style="background:linear-gradient(135deg,#2E8B6A,#A8DCC4)"></div>
+            <div style="background:linear-gradient(135deg,#7A5C99,#D6C6E8)"></div>
+            <div style="background:linear-gradient(135deg,#1F6F8B,#E3F1F5)"></div>
+          </div>
+          <div class="service"><div><b>Spa treatment</b><span>On board, 60 minutes</span></div><span class="book">Book</span></div>
+          <div class="service"><div><b>Dive trip</b><span>Poor Knights Islands</span></div><span class="book">Book</span></div>
+          <div class="service"><div><b>Private chef dinner</b><span>Sun deck, sunset</span></div><span class="book">Book</span></div>
+          <div class="note">Guests book and pay in the app. You see every booking.</div>
+        </div>
+      </div></div>
+      <div class="cap"><strong>Guest side, optional</strong><span>A gallery and your services, with bookings and payments built in.</span></div>
+    </div>
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>10:30</span><span>5G</span></div>
+        <div class="top"><span class="title">Charter overview</span></div>
+        <div class="body" style="gap:9px">
+          <div class="facts">
+            <div><b>Laurent party</b><span>Primary host: Julien Laurent</span></div>
+            <div><b>6 nights</b><span>Wed 2 to Tue 8 Dec</span></div>
+            <div><b>6 guests</b><span>5 adults, 1 child</span></div>
+            <div><b>Bay of Islands</b><span>Itinerary</span></div>
+          </div>
+          <div class="glist">
+            <div class="gl"><div><b>Julien Laurent</b><span class="c">Master &middot; Primary host</span></div><span class="tg blue">Pescatarian</span></div>
+            <div class="gl"><div><b>Claire Laurent</b><span class="c">Master</span></div><span class="tg red">Coeliac</span></div>
+            <div class="gl"><div><b>Amara Okafor</b><span class="c">VIP cabin</span></div><span class="tg red">Nut allergy</span></div>
+            <div class="gl"><div><b>Tunde Okafor</b><span class="c">VIP cabin</span></div><span class="tg blue">No restrictions</span></div>
+            <div class="gl"><div><b>Wei Chen</b><span class="c">Guest cabin 1</span></div><span class="tg blue">Vegetarian</span></div>
+            <div class="gl"><div><b>Lucas Chen, 9</b><span class="c">Guest cabin 2</span></div><span class="tg blue">Kids menu</span></div>
+          </div>
+          <div class="occ"><b>Fri 4 Dec:</b> Laurents' anniversary<br><b>Sun 6 Dec:</b> Amara's birthday, nut-free cake</div>
+        </div>
+      </div></div>
+      <div class="cap"><strong>Charter overview</strong><span>Who's coming, how long they're staying, the primary host, cabins, allergies and every occasion, in one screen.</span></div>
+    </div>
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>11:15</span><span>5G</span></div>
+        <div class="top"><span class="back">&#8249;</span><span class="title">Guest portal</span></div>
+        <div class="body">
+          <div class="chips"><span class="on">Laurent</span><span>Okafor</span><span>Chen</span><span>+1</span></div>
+          <div class="gcard">
+            <div class="who">Mr and Mrs Laurent</div>
+            <div class="from">Geneva, Switzerland &middot; Master cabin &middot; Arrive Wed 14:00</div>
+          </div>
+          <div class="alert">Mrs Laurent: coeliac, no gluten. Galley and interior notified.</div>
+          <div class="kv"><span>Diet</span><b>Mr: pescatarian</b></div>
+          <div class="kv"><span>Morning</span><b>Flat white, 07:00</b></div>
+          <div class="kv"><span>Drinks</span><b>Sparkling water, no ice</b></div>
+          <div class="kv"><span>Cabin</span><b>Firm pillows, blinds down</b></div>
+          <div class="kv"><span>Occasion</span><b>Anniversary Friday</b></div>
+          <div class="kv"><span>Activities</span><b>Diving, paddleboard</b></div>
+          <div class="note">Visible to the captain, chief stew and chef only.</div>
+        </div>
+      </div></div>
+      <div class="cap"><strong>Guest portal</strong><span>Who they are, where they're from, diets, allergies and preferences, ready for the crew before guests step aboard.</span></div>
+    </div>
+
+    <div class="item">
+      <div class="phone"><div class="screen">
+        <div class="notch"></div>
+        <div class="bar"><span>18:40</span><span>5G</span></div>
+        <div class="top"><span class="title">Payments</span></div>
+        <div class="body">
+          <div class="stat">
+            <div><b>NZ$4,850</b><span>Paid this charter</span></div>
+            <div><b>NZ$1,200</b><span>Waiting on payment</span></div>
+          </div>
+          <div class="pay"><div><b>Spa treatment x2</b><span>Laurent &middot; Tue</span></div><span class="paid">Paid</span></div>
+          <div class="pay"><div><b>Private chef dinner</b><span>Laurent &middot; Fri</span></div><span class="paid">Paid</span></div>
+          <div class="pay"><div><b>Dive trip, Poor Knights</b><span>Okafor &middot; Thu</span></div><span class="due">Send link</span></div>
+          <div class="pay"><div><b>Wine selection</b><span>Chen &middot; Wed</span></div><span class="due">Send link</span></div>
+          <button class="cta" type="button">Send invoice to guest</button>
+          <div class="note">Guests pay by link or QR code. Money goes straight into the yacht's own account.</div>
+        </div>
+      </div></div>
+      <div class="cap"><strong>Payment portal</strong><span>Every extra tracked, with payment links and invoices sent from the app.</span></div>
+    </div>
+
+  </div>
+</main>
+
+<section class="close">
+  <div class="wrap">
+    <div class="panel">
+      <div>
+        <h2>See it with your yacht's name on it</h2>
+        <p>We've built this kind of app for the superyacht industry here in New Zealand before. We'll send you a link to a version branded for your yacht to look through in your own time, give you a quick call, then go through it on Zoom if it's useful.</p>
+        <ul>
+          <li>Your crew get support where they actually are.</li>
+          <li>You can show clients, insurers and regulators what support you provide.</li>
+          <li>New starters arrive already inducted.</li>
+        </ul>
+      </div>
+      <form class="demo" id="demo-form" data-page="yacht-demo" data-industry="Superyacht">
+        <label for="f-name">Your name<input id="f-name" name="name" autocomplete="name" required></label>
+        <label for="f-biz">Yacht or company<input id="f-biz" name="business" autocomplete="organization" required></label>
+        <div class="two">
+          <label for="f-phone">Phone<input id="f-phone" name="phone" type="tel" autocomplete="tel" required></label>
+          <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email" required></label>
+        </div>
+        <button type="submit">Send me my demo link</button>
+        <span id="status" role="status" aria-live="polite"></span>
+        <p class="fine">We only use your details to arrange your demo. Or email contact@ascendapps.co.nz.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer><b>Ascendapps</b> &middot; Ascendapps Limited, official Able2 partner NZ &middot; Kiwi owned and operated</footer>
+
+<script>
+(function () {
+  var moods = document.querySelectorAll("#moods .mood");
+  moods.forEach(function (m) { m.addEventListener("click", function () { moods.forEach(function (x) { x.classList.remove("on"); }); m.classList.add("on"); }); });
+  var share = document.getElementById("share");
+  share.addEventListener("click", function () { var on = share.classList.toggle("on"); share.setAttribute("aria-pressed", on ? "true" : "false"); });
+  document.getElementById("send").addEventListener("click", function () { document.getElementById("done").textContent = "Thanks, Sam. Check-in sent."; });
+})();
+</script>
+<script src="../js/form.js"></script>
+</body>
+</html>
