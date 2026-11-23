@@ -112,6 +112,12 @@ input[type=range]::-moz-range-thumb{width:28px;height:28px;border:0;border-radiu
 .after h3{font-size:19px;display:flex;align-items:center;gap:10px}
 .after h3 span{font-size:12px;font-family:Inter;font-weight:800;letter-spacing:.1em;color:var(--teal);text-transform:uppercase}
 .replay{margin-top:8px}
+.demoline{display:grid;grid-template-columns:.8fr 1.2fr;gap:0;margin-top:56px;overflow:hidden;padding:0}
+.demoline img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;display:block;min-height:340px}
+.demoline .tx{padding:40px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.demoline h3{font-size:clamp(28px,3.4vw,40px);margin-bottom:12px}
+.demoline p{color:var(--b);margin-bottom:24px;max-width:480px}
+@media(max-width:800px){.demoline{grid-template-columns:1fr}.demoline img{max-height:380px}.demoline .tx{padding:28px}}
 /* steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:44px;counter-reset:s}
 .step{position:relative;padding-top:66px}
@@ -244,6 +250,15 @@ footer a:hover{color:#fff}
 <div class="card" data-step="3"><h3><span>You</span> The call summary and transcript</h3><p style="color:var(--b)">Every call saved word for word, so you know exactly what the customer said.</p></div>
 </div>
 <button class="btn ghost replay" id="replay" type="button">↻ Replay the call</button>
+</div>
+</div>
+<div class="card demoline reveal" id="demo-line">
+<img src="rua-on-the-tools.webp" alt="A mechanic working on a car wheel while his phone rings on the toolbox" loading="lazy">
+<div class="tx">
+<span class="k">Hear it for yourself</span>
+<h3>He's on the tools. <span class="g">It's on the phone.</span></h3>
+<p>Want to hear what your customers would hear? Book a demo and we'll set it up to answer with your business name, so you can ring it yourself.</p>
+<a href="#demo" class="btn">Book a free demo</a>
 </div>
 </div>
 </div></section>
