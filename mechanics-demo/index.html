@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root { --bg:#05040A; --card:#110D1C; --border:#241E36; --teal:#1DD7E0; --g:linear-gradient(90deg,#C932F9,#48ABE6); --head:#F2F0FB; --body:#C8C5D9; --muted:#6E688E;
-  --w-dark:#12372A; --w-mid:#1E5A43; --w-kowhai:#F2C230; --w-soft:#EAF3EE; --w-cream:#FBF7EA; --ink:#14211B; --line:#DCE6E0; --good:#2E8B6A; --white:#FFFFFF;
+  --w-dark:#18264A; --w-mid:#2C447A; --w-kowhai:#F2C230; --w-soft:#EAEEF7; --w-cream:#FBF7EA; --ink:#141A2B; --line:#DDE2EC; --good:#2E8B6A; --white:#FFFFFF;
   --sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --display:"Exo 2","Inter",sans-serif; }
 * { box-sizing:border-box; }
 body { margin:0; font-family:var(--sans); color:var(--head); background:var(--bg); background-image:radial-gradient(900px 500px at 15% -5%, #0A2A30 0%, transparent 60%), radial-gradient(900px 600px at 95% 10%, #250931 0%, transparent 60%); line-height:1.55; }
@@ -128,6 +128,13 @@ h1 { font-family:var(--display); font-weight:800; font-size:clamp(36px,5.4vw,60p
 .split { text-align:center; padding:26px 0 4px; }
 .split h2 { font-family:var(--display); font-weight:800; font-size:clamp(26px,3.6vw,38px); margin:0 0 8px; }
 .split p { color:var(--body); max-width:640px; margin:0 auto; }
+.meet { display:grid; grid-template-columns:minmax(0,420px) 1fr; gap:0; background:var(--card); border:1px solid var(--border); border-radius:20px; overflow:hidden; margin:30px auto 10px; max-width:1040px; }
+.meet img { width:100%; height:100%; max-height:460px; object-fit:cover; object-position:center 30%; display:block; }
+.meet .tx { padding:34px; display:flex; flex-direction:column; justify-content:center; }
+.meet .k { font-size:12px; font-weight:800; letter-spacing:.16em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
+.meet h2 { font-family:var(--display); font-weight:800; font-size:clamp(26px,3.4vw,36px); line-height:1.1; margin:0 0 12px; }
+.meet p { color:var(--body); margin:0 0 10px; }
+@media (max-width:800px) { .meet { grid-template-columns:1fr; } .meet img { max-height:380px; } .meet .tx { padding:24px; } }
 section.close { padding:40px 0 70px; }
 .panel { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:32px; display:grid; grid-template-columns:1fr 1fr; gap:32px; align-items:start; }
 .panel h2 { font-family:var(--display); font-weight:800; font-size:34px; line-height:1.1; margin:0 0 12px; }
@@ -159,13 +166,23 @@ footer b { color:var(--head); }
   <div class="wrap">
     <span class="tag">Made-up demo</span>
     <h1>Your workshop's <span class="gt">own app</span></h1>
-    <p>Customers book, approve quotes, see when their car's ready and pay, all in an app with your name on it. Your AI receptionist answers the calls you can't get to and books the jobs straight in. This example uses a made-up workshop, Rua's Auto. Yours carries your name, logo, colours and services.</p>
-    <p class="disclaimer">This is a made-up demo. The workshop, customers, cars and figures are all examples. Your app will have your own branding and the functionality you choose.</p>
+    <p>Customers book, approve quotes, see when their car's ready and pay, all in an app with your name on it. Your AI receptionist answers the calls you can't get to and books the jobs straight in. This example is Rua's Auto. Yours carries your name, logo, colours and services.</p>
+    <p class="disclaimer">This is a made-up demo. Rua, his workshop, customers, cars and figures are all examples. Your app will have your own branding and the functionality you choose.</p>
   </div>
 </header>
 
 <main class="wrap">
-  <div class="split"><h2>What your customers see</h2><p>Tap through the booking and the quote to try them.</p></div>
+  <div class="meet">
+    <img src="/receptionist/rua-on-the-tools.webp" alt="Rua working on a car wheel while his phone rings on the toolbox" loading="lazy">
+    <div class="tx">
+      <span class="k">Meet Rua</span>
+      <h2>Under a car, phone ringing. <span class="gt">Again.</span></h2>
+      <p>Rua runs Rua's Auto. Every time he downs tools to grab the phone, the job stops. Every call he misses is a WOF or a service that goes to the workshop down the road.</p>
+      <p>So now his AI receptionist answers every call, and his own app takes the bookings, gets quotes approved and collects payment. Rua keeps working. Here's what it looks like.</p>
+    </div>
+  </div>
+
+  <div class="split"><h2>What Rua's customers see</h2><p>Tap through the booking and the quote to try them.</p></div>
   <div class="phones">
 
     <div class="item">
@@ -174,7 +191,7 @@ footer b { color:var(--head); }
         <div class="bar"><span>08:12</span><span>5G</span></div>
         <div class="body">
           <div class="wbrand">
-            <svg width="32" height="32" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="#12372A"/><circle cx="20" cy="20" r="9" fill="none" stroke="#F2C230" stroke-width="3"/><circle cx="20" cy="20" r="3" fill="#F2C230"/><path d="M20 4v6M20 30v6M4 20h6M30 20h6" stroke="#F2C230" stroke-width="3" stroke-linecap="round"/></svg>
+            <svg width="32" height="32" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.5" fill="#18264A"/><circle cx="20" cy="20" r="9" fill="none" stroke="#F2C230" stroke-width="3"/><circle cx="20" cy="20" r="3" fill="#F2C230"/><path d="M20 4v6M20 30v6M4 20h6M30 20h6" stroke="#F2C230" stroke-width="3" stroke-linecap="round"/></svg>
             <span class="name">RUA'S AUTO</span>
             <span class="sub">Mechanical and WOF</span>
           </div>
@@ -283,14 +300,14 @@ footer b { color:var(--head); }
 
   </div>
 
-  <div class="split"><h2>What you and your team see</h2><p>Every booking, call, job and payment in one place, including the calls you couldn't get to.</p></div>
+  <div class="split"><h2>What Rua and his team see</h2><p>Every booking, call, job and payment in one place, including the calls he couldn't get to.</p></div>
   <div class="phones">
 
     <div class="item">
       <div class="phone"><div class="screen">
         <div class="notch"></div>
         <div class="bar"><span>07:30</span><span>5G</span></div>
-        <div class="top"><span class="title">Today in the workshop</span></div>
+        <div class="top"><span class="title">M&#333;rena, Rua</span></div>
         <div class="body" style="gap:8px">
           <div class="stat">
             <div><b>9</b><span>Jobs booked today</span></div>
